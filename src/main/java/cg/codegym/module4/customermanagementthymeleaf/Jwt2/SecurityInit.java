@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package cg.codegym.module4.customermanagementthymeleaf.Jwt2;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

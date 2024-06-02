@@ -7,6 +7,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Setter
 @Getter
 @Entity
@@ -26,6 +28,9 @@ public class Player {
     private String img;
     @Column(name = "image_path")
     private String imagePath;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Positions> positions;
 
     public Player() {
     }

@@ -1,7 +1,7 @@
-package com.example.demo.config;
+package cg.codegym.module4.customermanagementthymeleaf.Jwt2;
 
-import com.example.demo.model.Role;
-import com.example.demo.model.User;
+import cg.codegym.module4.customermanagementthymeleaf.Model.Player;
+import cg.codegym.module4.customermanagementthymeleaf.Model.Positions;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,35 +14,35 @@ import java.util.List;
 public class UserPrinciple implements UserDetails {
     @Serial
     private static final long serialVersionUID = 1L;
-    private final String username;
-    private final String password;
+    private final String first_name;
+    private final String last_name;
     private final Collection<? extends GrantedAuthority> roles;
 
-    public UserPrinciple(String username, String password,
+    public UserPrinciple(String first_name, String last_name,
                          Collection<? extends GrantedAuthority> roles) {
-        this.username = username;
-        this.password = password;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.roles = roles;
     }
 
-    public static UserPrinciple build(User user) {
+    public static UserPrinciple build(Player user) {
         List<GrantedAuthority> authorities = new ArrayList<>();
-        for (Role role : user.getRoles()) {
+        for (Positions role : user.getPositions()) {
             authorities.add(new SimpleGrantedAuthority(role.getName()));
         }
 
-        return new UserPrinciple(user.getUsername(),
-                user.getPassword(),authorities);
+        return new UserPrinciple(user.getFirstName(),
+                user.getLastName(),authorities);
     }
 
     @Override
     public String getUsername() {
-        return username;
+        return first_name;
     }
 
     @Override
     public String getPassword() {
-        return password;
+        return last_name;
     }
 
     @Override

@@ -1,9 +1,9 @@
-package com.example.demo.config;
+package cg.codegym.module4.customermanagementthymeleaf.Jwt2;
 
-import com.example.demo.config.jwt.CustomAccessDeniedHandler;
-import com.example.demo.config.jwt.JwtAuthenticationTokenFilter;
-import com.example.demo.config.jwt.RestAuthenticationEntryPoint;
-import com.example.demo.config.service.UserService;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt2.CustomAccessDeniedHandler;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt2.JwtAuthenticationTokenFilter;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt2.RestAuthenticationEntryPoint;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt2.PlayerServiceJwt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

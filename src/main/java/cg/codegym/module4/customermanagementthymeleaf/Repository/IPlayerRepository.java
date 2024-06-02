@@ -14,4 +14,8 @@ public interface IPlayerRepository extends CrudRepository<Player,Long> {
     Page<Player> findAllByFirstNameContainingOrLastNameContaining(Pageable pageable, String firstName, String lastName);
 
     boolean existsById(Long id);
+
+    Player findByName(String name);
+
+    Player findByUsername(String username);
 }
