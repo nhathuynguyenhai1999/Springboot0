@@ -38,6 +38,16 @@ dependencies {
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
     implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.10.Final'
 
+
+
+    // jwt
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+
 }
 
 tasks.named('test') {
