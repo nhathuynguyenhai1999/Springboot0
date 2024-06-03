@@ -28,13 +28,13 @@ public class AuthController {
     private PlayerServiceJwt userService;
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody Player user) {
+    public ResponseEntity<?> login(@RequestBody PlayerJwt user) {
         Authentication authentication
-                = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getFirstName(), user.getLastName()));
+                = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getId(), user.getUserName()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtService.generateTokenLogin(authentication);
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        Player currentUser = userService.findByName(user.getFirstName());
+        PlayerJwt currentUser = userService.findByName(user.getUserName());
         return ResponseEntity.ok(new JwtResponse(currentUser.getId(), jwt, userDetails.getUsername(), userDetails.getUsername(), userDetails.getAuthorities()));
     }
 }

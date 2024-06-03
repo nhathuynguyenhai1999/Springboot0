@@ -1,5 +1,4 @@
 package cg.codegym.module4.customermanagementthymeleaf.Controller.Jwt1;
-import cg.codegym.module4.customermanagementthymeleaf.Jwt2.PlayerServiceJwt;
 import cg.codegym.module4.customermanagementthymeleaf.Model.Player;
 import cg.codegym.module4.customermanagementthymeleaf.Service.iml.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @CrossOrigin("*")

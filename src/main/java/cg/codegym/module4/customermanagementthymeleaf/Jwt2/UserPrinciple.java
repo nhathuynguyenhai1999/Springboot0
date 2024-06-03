@@ -1,6 +1,6 @@
 package cg.codegym.module4.customermanagementthymeleaf.Jwt2;
 
-import cg.codegym.module4.customermanagementthymeleaf.Model.Player;
+import cg.codegym.module4.customermanagementthymeleaf.Model.PlayerJwt;
 import cg.codegym.module4.customermanagementthymeleaf.Model.Positions;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -25,14 +25,14 @@ public class UserPrinciple implements UserDetails {
         this.roles = roles;
     }
 
-    public static UserPrinciple build(Player user) {
+    public static UserPrinciple build(PlayerJwt user) {
         List<GrantedAuthority> authorities = new ArrayList<>();
         for (Positions role : user.getPositions()) {
             authorities.add(new SimpleGrantedAuthority(role.getName()));
         }
 
-        return new UserPrinciple(user.getFirstName(),
-                user.getLastName(),authorities);
+        return new UserPrinciple(user.getUserName(),
+                user.getUserName(),authorities);
     }
 
     @Override

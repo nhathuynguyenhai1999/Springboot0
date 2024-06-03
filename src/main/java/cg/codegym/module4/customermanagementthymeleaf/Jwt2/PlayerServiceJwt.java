@@ -1,8 +1,7 @@
 package cg.codegym.module4.customermanagementthymeleaf.Jwt2;
 
-import cg.codegym.module4.customermanagementthymeleaf.Jwt2.UserPrinciple;
-import cg.codegym.module4.customermanagementthymeleaf.Model.Player;
-import cg.codegym.module4.customermanagementthymeleaf.Repository.IPlayerRepository;
+import cg.codegym.module4.customermanagementthymeleaf.Model.PlayerJwt;
+import cg.codegym.module4.customermanagementthymeleaf.Repository.IPlayerJwtRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,13 +11,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class PlayerServiceJwt implements UserDetailsService {
     @Autowired
-    private IPlayerRepository userRepository;
+    private IPlayerJwtRepository userRepository;
 
-    public Player findByName(String name) {
-        return userRepository.findByName(name);
+    public PlayerJwt findByName(String userName) {
+        return userRepository.findByUserName(userName);
     }
 
-    public UserDetails loadUserByUsername(String username) {
-        return UserPrinciple.build(userRepository.findByUsername(username));
+    public UserDetails loadUserByUsername(String userName) {
+        return UserPrinciple.build(userRepository.findByUserName(userName));
     }
 }
