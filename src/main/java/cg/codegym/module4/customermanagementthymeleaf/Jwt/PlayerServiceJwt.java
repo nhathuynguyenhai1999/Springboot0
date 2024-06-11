@@ -1,4 +1,4 @@
-package com.example.demo.config.service;
+package cg.codegym.module4.customermanagementthymeleaf.Jwt;
 
 import com.example.demo.config.UserPrinciple;
 import com.example.demo.model.User;

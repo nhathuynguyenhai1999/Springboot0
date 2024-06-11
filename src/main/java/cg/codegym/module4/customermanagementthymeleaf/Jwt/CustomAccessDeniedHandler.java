@@ -1,4 +1,4 @@
-package cg.codegym.module4.customermanagementthymeleaf;
+package cg.codegym.module4.customermanagementthymeleaf.Jwt;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
