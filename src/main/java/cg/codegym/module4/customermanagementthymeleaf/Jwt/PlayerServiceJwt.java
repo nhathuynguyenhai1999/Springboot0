@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PLayerServiceJwt implements UserDetailsService {
+public class PlayerServiceJwt implements UserDetailsService {
     @Autowired
     private IUserRepository userRepository;
 

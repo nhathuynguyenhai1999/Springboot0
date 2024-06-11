@@ -1,6 +1,6 @@
-package com.example.demo.config;
+package cg.codegym.module4.customermanagementthymeleaf.Jwt;
 
-import com.example.demo.config.jwt.CustomAccessDeniedHandler;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt.JwtCustomAccessDeniedHandler;
 import com.example.demo.config.jwt.JwtAuthenticationTokenFilter;
 import com.example.demo.config.jwt.RestAuthenticationEntryPoint;
 import com.example.demo.config.service.UserService;
