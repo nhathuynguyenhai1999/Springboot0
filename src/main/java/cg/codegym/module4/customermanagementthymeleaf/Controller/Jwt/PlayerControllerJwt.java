@@ -1,33 +1,33 @@
-package com.example.demo.controller;
-import com.example.demo.model.Customer;
-import com.example.demo.service.ICustomerService;
+package cg.codegym.module4.customermanagementthymeleaf.Controller.Jwt;
+import cg.codegym.module4.customermanagementthymeleaf.Model.Player;
+import cg.codegym.module4.customermanagementthymeleaf.Service.iml.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+
 
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/api/customers")
-public class PLayerControllerJwt {
+public class PlayerControllerJwt {
     @Autowired
-    private ICustomerService customerService;
+    private PlayerService customerService;
 
     @GetMapping("")
-    public ResponseEntity<List<Customer>> findAll() {
+    public ResponseEntity<Iterable<Player>> findAll() {
         return new ResponseEntity<>(customerService.findAll(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Customer> finOne(@PathVariable Long id) {
-        Customer c = customerService.findOne(id);
+    public ResponseEntity<Player> findOne(@PathVariable Long id) throws Exception {
+        Player c = customerService.findOne(id);
         return new ResponseEntity<>(customerService.findOne(id), HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<?> save(@RequestBody Customer customer) {
+    public ResponseEntity<?> save(@RequestBody Player customer) {
         customerService.save(customer);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }

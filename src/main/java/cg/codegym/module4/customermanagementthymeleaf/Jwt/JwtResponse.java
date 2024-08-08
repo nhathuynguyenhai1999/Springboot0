@@ -1,4 +1,4 @@
-package com.example.demo.config.service;
+package cg.codegym.module4.customermanagementthymeleaf.Jwt;
 
 import org.springframework.security.core.GrantedAuthority;
 

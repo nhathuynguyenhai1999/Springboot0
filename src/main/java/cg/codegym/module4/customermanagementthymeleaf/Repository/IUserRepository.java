@@ -1,5 +1,5 @@
-package com.example.demo.repo;
-import com.example.demo.model.User;
+package cg.codegym.module4.customermanagementthymeleaf.Repository;
+import cg.codegym.module4.customermanagementthymeleaf.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

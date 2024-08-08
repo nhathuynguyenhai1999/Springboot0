@@ -1,6 +1,6 @@
 package cg.codegym.module4.customermanagementthymeleaf.Jwt;
 
-import com.example.demo.config.UserPrinciple;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt.UserPrinciple;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
