@@ -1,7 +1,7 @@
 package cg.codegym.module4.customermanagementthymeleaf.Jwt;
 
-import com.example.demo.config.UserPrinciple;
-import com.example.demo.model.User;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt.UserPrinciple;
+import cg.codegym.module4.customermanagementthymeleaf.Model.User;
 import com.example.demo.repo.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

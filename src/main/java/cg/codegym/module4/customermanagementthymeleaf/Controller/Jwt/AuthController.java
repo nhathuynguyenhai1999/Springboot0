@@ -1,8 +1,8 @@
-package com.example.demo.controller;
+package cg.codegym.module4.customermanagementthymeleaf.Controller.Jwt;
 
-import com.example.demo.config.service.JwtResponse;
-import com.example.demo.config.service.JwtService;
-import com.example.demo.config.service.UserService;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt.JwtResponse;
+import cg.codegym.module4.customermanagementthymeleaf.Jwt.JwtService;
+import cg.codegym.module4.customermanagementthymeleaf.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,7 +11,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.model.*;
+import cg.codegym.module4.customermanagementthymeleaf.Model.*;
 
 @RestController
 @CrossOrigin("*")

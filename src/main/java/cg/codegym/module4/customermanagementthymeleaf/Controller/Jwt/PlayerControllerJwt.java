@@ -1,6 +1,6 @@
-package com.example.demo.controller;
-import com.example.demo.model.Customer;
-import com.example.demo.service.ICustomerService;
+package cg.codegym.module4.customermanagementthymeleaf.Controller.Jwt;
+import cg.codegym.module4.customermanagementthymeleaf.Model.Customer;
+import cg.codegym.module4.customermanagementthymeleaf.Service.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/api/customers")
-public class PLayerControllerJwt {
+public class PlayerControllerJwt {
     @Autowired
     private ICustomerService customerService;
 
