@@ -8,6 +8,7 @@ import cg.codegym.module4.customermanagementthymeleaf.Repository.IPlayerReposito
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -89,5 +90,17 @@ public class PlayerService implements IPlayerService {
     // add aop exception
     public Player findByID(Long id){
         return iCustomerRepository.findById(id).orElseThrow(()-> new EntityNotFoundException("Cầu thủ có ID như thế đéo thấy" + id));
+    }
+
+    public void deleteById(Long id) {
+        iCustomerRepository.deleteById(id);
+    }
+
+    public Player fidnByFirstNameAndLastName(String firstName, String lastName) {
+        return iCustomerRepository.findByFirstNameAndLastName(firstName, lastName);
+    }
+
+    public UserDetails loadUserByUsername(String username) {
+        return iCustomerRepository.loadUserByUsername(username);
     }
 }

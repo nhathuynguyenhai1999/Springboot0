@@ -1,6 +1,7 @@
 package cg.codegym.module4.customermanagementthymeleaf.Jwt;
 
 
+import cg.codegym.module4.customermanagementthymeleaf.Service.iml.PlayerService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +23,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     private JwtService jwtService;
 
     @Autowired
-    private UserService userService;
+    private PlayerService userService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,

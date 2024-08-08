@@ -34,7 +34,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
     implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.10.Final'
 

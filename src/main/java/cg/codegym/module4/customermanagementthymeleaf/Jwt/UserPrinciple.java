@@ -1,7 +1,7 @@
 package cg.codegym.module4.customermanagementthymeleaf.Jwt;
 
 import cg.codegym.module4.customermanagementthymeleaf.Model.Role;
-import cg.codegym.module4.customermanagementthymeleaf.User;
+import cg.codegym.module4.customermanagementthymeleaf.Model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
