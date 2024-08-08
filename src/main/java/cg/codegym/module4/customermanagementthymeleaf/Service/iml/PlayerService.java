@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -100,7 +101,7 @@ public class PlayerService implements IPlayerService {
         return iCustomerRepository.findByFirstNameAndLastName(firstName, lastName);
     }
 
-    public UserDetails loadUserByUsername(String username) {
-        return iCustomerRepository.loadUserByUsername(username);
+    public UserDetails loadUserByUsername(String firstname) throws UsernameNotFoundException {
+        return iCustomerRepository.loadUserByFirstName(firstname);
     }
 }
